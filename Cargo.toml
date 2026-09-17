@@ -1,0 +1,21 @@
+[package]
+name = "cmln"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.89"
+license = "FSL-1.1-ALv2"
+description = "Shared helper library for the cksk/clck kiosk family: display-socket wire protocol and host-feed schema"
+homepage = "https://github.com/corbet-labs/cmln"
+
+# Library only in v1: cksk (client) and clck (server) both link this instead of
+# reimplementing the wire magic, HELLO framing, and host-feed schema by hand.
+[lib]
+name = "cmln"
+path = "src/lib.rs"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[profile.release]
+opt-level = 2
