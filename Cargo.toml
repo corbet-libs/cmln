@@ -5,7 +5,8 @@ edition = "2021"
 rust-version = "1.89"
 license = "FSL-1.1-ALv2"
 description = "Shared helper library for the cksk/clck kiosk family: display-socket wire protocol and host-feed schema"
-homepage = "https://github.com/corbet-labs/cmln"
+homepage = "https://github.com/corbet-libs/cmln"
+repository = "https://github.com/corbet-libs/cmln"
 
 # Library only in v1: cksk (client) and clck (server) both link this instead of
 # reimplementing the wire magic, HELLO framing, and host-feed schema by hand.
